@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 
 class Test extends React.Component{
 
@@ -53,4 +53,4 @@ return (<h3>{this.props.contents}</h3>);
 
 }
 }
-export default Test;
+export default Test;*/

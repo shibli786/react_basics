@@ -4,13 +4,16 @@
   "description": "learning",
   "main": "index.js",
   "scripts": {
-  "start": "webpack-dev-server --hot"
+    "start": "webpack-dev-server --hot"
   },
   "author": "shibli786",
   "license": "ISC",
   "dependencies": {
+    "history": "^4.6.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "react-router": "^4.0.0",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.2"
   }

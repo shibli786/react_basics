@@ -4,7 +4,6 @@ var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   filename: 'index.html',
   inject: 'body'
 });
-console.log("aaaaaaaaaaaaaa");
 module.exports = {
    entry: './main.js',
 	
