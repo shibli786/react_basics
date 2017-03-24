@@ -2,18 +2,31 @@ import React from 'react'
 import ReactDOM from 'react-dom';
 //import { Router, Route, browserHistory, IndexRoute  } from 'react-router'
 
+import { BrowserRouter as Router,  Route,Link } from 'react-router-dom';
 
 export class App extends React.Component{
 
 render(){
 return (
 <div>
+<Router>
+    <div>
+      <ul>
+        <li><Link to="/">App</Link></li>
+        <li><Link to="/home">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+      </ul>
 
-	<ul>
-		<li>Home</li>
-		<li>About</li>
-		<li>Contact</li>
-	</ul>
+
+      <Route exact path="/" component={Home}/>
+      <Route path="/about" component={About}/>
+      <Route path="/contact" component={Contact}/>
+
+     <Route path="/home/:id" component={Home}/>
+
+    </div>
+  </Router>
 	
  {this.props.children}
 
@@ -64,15 +77,4 @@ render(){
 }
 }
 
-ReactDOM.render((
-   <Router history = {browserHistory}>
-      <Route path = "/" component = {App}>
-         <IndexRoute component = {Home} />
-         <Route path = "home" component = {Home} />
-         <Route path = "about" component = {About} />
-         <Route path = "contact" component = {Contact} />
-      </Route>
-   </Router>
-	
-), document.getElementById('app'))
 
