@@ -9,9 +9,9 @@ import ReactDOM from 'react-dom';
  import {App,Home,Contact,About} from './Forms.jsx';
 
 import {AddTodoForm ,TodoList,Status} from './Redux.jsx';
+import {SideBar} from './SideBar.jsx'
 
 
-import { BrowserRouter as Router,  Route,Link } from 'react-router-dom';
 
 
 
@@ -21,4 +21,5 @@ import { BrowserRouter as Router,  Route,Link } from 'react-router-dom';
 
 //ReactDOM.render(<ComponentApi />,document.getElementById('val'));
 
-ReactDOM.render(<App />,document.getElementById('app'));
+// /ReactDOM.render(<App />,document.getElementById('app'));
+ReactDOM.render(<SideBar />,document.getElementById('app'));
