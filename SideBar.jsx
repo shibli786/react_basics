@@ -19,49 +19,35 @@ var style2={
 		return(
 			<Router>
 				<div style={style1}>
-				<div style={style2}>
-		<ul>
+					<div style={style2}>
+						<ul>
+						<li><Link to="/">Home</Link></li>
+						<li><Link to="/bubblegum">BubbleGum</Link></li>
+						<li><Link to="/shoelaces">Shoelaces</Link></li>
 
-		<li>
-		<Link to="/">Home
-		</Link>
-		</li>
-
-
-		<li>
-		<Link to="/bubblegum">BubbleGum
-		</Link>
-		</li>
-
-
-		<li>
-		<Link to="/shoelaces">Shoelaces
-		</Link>
-		</li>
-
-		</ul>
-		</div>
+						</ul>
+					</div>
 		
-
-		 <Switch>
-			 <Route path="/" component={Home}/>
-	         <Route path="/bubblegum" component={BubbleGum}/>
-	         <Route path="/shoelaces" component={ShoeLaces}/>
-	         <Route component={NoMatch}/>
-		</Switch>
+					 <Switch>
+				         <Route path="/bubblegum" component={Home}/>
+				         <Route path="/shoelaces" component={ShoeLaces}/>
+				         <Route component={NoMatch}/>
+					</Switch>
 				</div>
 		
-		</Router>);
+			</Router>);
 
 		
 		
 	}
 }
 
-class BubbleGum extends React.Component{
+export class BubbleGum extends React.Component{
 
 
 	render(){
+
+		console.log("BubbleGum is called");
 
 return(
 
@@ -72,28 +58,25 @@ return(
 	}
 }
 
-class ShoeLaces extends React.Component{
+export class ShoeLaces extends React.Component{
 
 
 	render(){
+		console.log("Shoelaces is called");
 
-return(
-
-		<div>ShoeLaces!</div>
-
-	);
+		return(<div>ShoeLaces!</div>);
 
 	}
 }
 
-class Home  extends React.Component{
+export class Home  extends React.Component{
 
 
 	render(){
 
-return(
+		return(
 
-		<div>Home</div>
+		<div>Idklsdklkl</div>
 
 	);
 

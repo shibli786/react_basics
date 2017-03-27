@@ -36,7 +36,7 @@ return (
     </div>
   </Router>
 	
- {this.props.children}
+
 
 </div>
 	);

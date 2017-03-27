@@ -6,10 +6,10 @@ import ReactDOM from 'react-dom';
 // import ComponentApi from './Component.jsx';
 
 
- import {App,Home,Contact,About} from './Forms.jsx';
+ import {App,Contact,About} from './Forms.jsx';
 
 import {AddTodoForm ,TodoList,Status} from './Redux.jsx';
-import {SideBar} from './SideBar.jsx'
+import {SideBar,Home,BubbleGum,ShoeLaces} from './SideBar.jsx'
 
 
 
