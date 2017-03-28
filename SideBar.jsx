@@ -3,34 +3,45 @@ import {BrowserRouter as Router, Link,Route,Switch} from 'react-router-dom';
 
 
 
-export class SideBar extends React.Component{
+export default class NavBar extends React.Component{
 
 	render(){
 
 
-var style2={
-        padding: '10px',
-        width: '40%',
-        background: '#f0f0f0'
+var style={
+	    textAlign: 'center',
+    	width: '100%',
+        marginTop: 0,
+   		 top: 0,
+    	padding: 21,
+    	background: 'blanchedalmond',
+        marginBottom: 0,
       };
- var style1={
- 	 display: 'flex' ,
- }
+ var style1=
+ {
+ 	 display: 'inline',
+    margin:10
+    }
+
+
 		return(
 			<Router>
-				<div style={style1}>
-					<div style={style2}>
-						<ul>
-						<li><Link to="/">Home</Link></li>
-						<li><Link to="/bubblegum">BubbleGum</Link></li>
-						<li><Link to="/shoelaces">Shoelaces</Link></li>
+				<div>
+					<div >
+						<ul style={style}>
+						<li style={style1}><Link to="/home">Home</Link></li>
+						<li  style={style1}><Link to="/about-us">About us</Link></li>
+						<li  style={style1}><Link to="/contact">Contact </Link></li>
 
 						</ul>
 					</div>
 		
 					 <Switch>
-				         <Route path="/bubblegum" component={Home}/>
-				         <Route path="/shoelaces" component={ShoeLaces}/>
+
+					     <Route path="/home" component={this.props.home}/>
+				         <Route path="/about-us" component={this.props.about}/>
+				         <Route path="/contact" component={this.props.contact}/>
+
 				         <Route component={NoMatch}/>
 					</Switch>
 				</div>
@@ -42,63 +53,11 @@ var style2={
 	}
 }
 
-export class BubbleGum extends React.Component{
 
 
-	render(){
-
-		console.log("BubbleGum is called");
-
-return(
-
-		<div>bubblegum!</div>
-
-	);
-
-	}
-}
-
-export class ShoeLaces extends React.Component{
 
 
-	render(){
-		console.log("Shoelaces is called");
 
-		return(<div>ShoeLaces!</div>);
-
-	}
-}
-
-export class Home  extends React.Component{
-
-
-	render(){
-
-		return(
-
-		<div>Idklsdklkl</div>
-
-	);
-
-	}
-}
-
-class Main extends React.Component{
-
-render(){
-
-
-	return(<div>
-		<p>Main </p>
-		{this.props.name}
-
-		</div>);
-
-		
-	
-}
-
-}
 
 
 const NoMatch = ({ location }) => (

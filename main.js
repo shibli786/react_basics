@@ -9,7 +9,8 @@ import ReactDOM from 'react-dom';
  import {App,Contact,About} from './Forms.jsx';
 
 import {AddTodoForm ,TodoList,Status} from './Redux.jsx';
-import {SideBar,Home,BubbleGum,ShoeLaces} from './SideBar.jsx'
+import {NavBar} from './SideBar.jsx';
+import {Main} from './main/Main.jsx';
 
 
 
@@ -22,4 +23,4 @@ import {SideBar,Home,BubbleGum,ShoeLaces} from './SideBar.jsx'
 //ReactDOM.render(<ComponentApi />,document.getElementById('val'));
 
 // /ReactDOM.render(<App />,document.getElementById('app'));
-ReactDOM.render(<SideBar />,document.getElementById('app'));
+ReactDOM.render(<Main />,document.getElementById('app'));
